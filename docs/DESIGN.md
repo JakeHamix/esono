@@ -19,6 +19,16 @@ Vychází z oficiálního logo manuálu e-Sono.
 | Text              | Tmavě šedá (`#2D2D2D`)        | Hlavní text — dobrá čitelnost             |
 | Text sekundární   | Střední šedá (`#6B7280`)      | Popisky, doplňkový text                   |
 
+### Dark mode barvy
+
+| Účel              | Barva                          | Poznámka                                  |
+|-------------------|--------------------------------|-------------------------------------------|
+| Pozadí            | Tmavě modrošedá (`#111827`)    | Hlavní pozadí v dark mode                 |
+| Povrch            | Tmavě šedá (`#1F2937`)         | Karty, hlavička, patička v dark mode      |
+| Okraje            | Šedá (`#374151`)               | Oddělovače, rámečky v dark mode           |
+| Text              | Světle šedá (`#E5E7EB`)        | Hlavní text v dark mode (gray-200)        |
+| Text sekundární   | Šedá (`#9CA3AF`)               | Popisky v dark mode (gray-400)            |
+
 Paleta je úmyslně střízlivá. Zelená (#88B340) je oficiální barva značky — evokuje zdraví, přírodu a inovaci. Černá dodává kontrast a profesionalitu.
 
 ## 3. Typografie
@@ -66,42 +76,65 @@ Manrope je oficiální font značky e-Sono dle logo manuálu. Moderní geometric
 - Na mobilu: hamburger menu
 
 ### Hero sekce
-- Celá šířka obrazovky
-- Název firmy + stručný slogan
-- Jedno tlačítko CTA (např. „Kontaktujte nás")
-- Čistý vizuál na pozadí nebo vedle textu (ultrazvukový přístroj, zdravotnické prostředí)
+- Celá šířka obrazovky, dva sloupce na desktopu (text vlevo, obrázek vpravo)
+- Stručný slogan + jedno tlačítko CTA („Kontaktujte nás")
+- Vizuál `hero.png` vedle textu
+- Slide-in animace (text zleva, obrázek zprava)
 
-### Sekce obsahu (O nás, Služby)
-- Střídání bílého a světle šedého pozadí
+### Statistiky
+- Lišta s 4 číselnými metrikami hned pod hero sekcí
+- Čísla v primární zelené, popisky v sekundární šedé
+- Staggerovaný fade-in efekt
+
+### Sekce obsahu (O nás, Proč nás, Služby)
+- Střídání bílého a světle šedého pozadí (v dark mode: dark-surface / dark-bg)
 - Obsah centrovaný, max šířka ~1100px
 - Dostatek bílého prostoru kolem textu
-- Služby jako karty nebo bloky v gridu (2–3 sloupce na desktopu, 1 na mobilu)
+- „Proč zvolit eSONO?" — 3 sloupce s ikonami v kruhovém badge
+- Služby jako karty v gridu (2 sloupce na desktopu, 1 na mobilu)
 
 ### Kontakt
 - Formulář na levé straně, kontaktní údaje na pravé (na desktopu)
 - Na mobilu vše pod sebou
-- Mapa (volitelně)
+- Google Maps embed (iframe) pod kontaktní sekcí
 
 ### Patička
+- Adaptivní dle dark/light mode (světle šedá / tmavá)
+- Logo ve správné barevné variantě dle režimu
 - Název firmy, adresa, základní kontakt
 - Odkaz na přepnutí jazyka
 
 ## 6. Vizuální prvky
 
 - **Obrázky:** Profesionální fotografie ultrazvukových přístrojů a zdravotnického prostředí. Vytvořené nebo upravené v **Canvě**.
-- **Ikony:** Jednoduché, liniové (line icons) — pro služby se používají Canva exporty (`service-icons.png`), pro UI prvky (kontakt, navigace) Lucide Icons via CDN
+- **Ikony:** Lucide Icons (CDN) — liniové ikony pro služby (handshake, truck, wrench, calendar-clock), výhody (shield-check, heart-handshake, refresh-cw) a UI prvky (menu, sun/moon, building, map-pin, mail, phone). Stylované v primární zelené na `bg-primary/10` badge.
+- **Vlaječky:** Inline SVG vlaječky (CZ, GB) v přepínači jazyků.
 - **Stíny:** Jemné box-shadow na kartách, nic výrazného
-- **Zaoblení:** Mírně zaoblené rohy (4–8px) na kartách a tlačítkách
-- **Animace:** Minimální — maximálně jemný fade-in při scrollu (pokud bude JS)
+- **Zaoblení:** Mírně zaoblené rohy (4–8px) na kartách a tlačítkách, kruhové badge pro ikony výhod
+- **Animace:** Scroll reveal efekty přes Intersection Observer:
+  - `data-reveal="up"` — fade-in + slide nahoru (nadpisy, karty)
+  - `data-reveal="left"` / `"right"` — fade-in + slide z boku (hero, kontakt)
+  - `data-reveal-delay="1-4"` — staggerované zpoždění pro gridy
+  - Jednorázové spuštění při 15% viditelnosti, 0.6s ease-out
 
-## 7. Responzivita
+## 7. Dark mode
+
+- **Přepínání:** Tailwind `darkMode: 'class'` — třída `dark` na `<html>`
+- **Detekce:** Automatická dle systémového nastavení (`prefers-color-scheme: dark`)
+- **Persistence:** Uživatelská volba uložena v `localStorage` (klíč `theme`)
+- **Bez záblesku:** Dark class se aplikuje synchronně před vykreslením DOM (IIFE v `app.js`)
+- **Přepínač:** Tlačítko sun/moon (Lucide) v hlavičce vedle jazykového přepínače
+- **Logo:** V hlavičce a patičce se automaticky přepíná mezi `logo-color.svg` (light) a `logo-white.svg` (dark) pomocí `dark:hidden` / `hidden dark:block`
+- **Všechny sekce** mají dark varianty: pozadí, text, rámečky, formulářové prvky, karty
+
+## 8. Responzivita
 
 - **Mobile-first** přístup
 - Breakpointy: ~768px (tablet), ~1024px (desktop)
 - Na mobilu: jednoduchý jednosloupcový layout, hamburger menu
 - Na desktopu: vícesloupcové gridy, fixní navigace
 
-## 8. Co nedělat
+## 9. Co nedělat
 
 - Žádné výrazné gradientové pozadí
 - Žádné animace pro efekt — jen funkční
