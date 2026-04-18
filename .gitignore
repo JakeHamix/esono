@@ -1,0 +1,6 @@
+# Source materials — may contain sensitive/large files
+input_resources/
+
+# OS
+.DS_Store
+Thumbs.db
