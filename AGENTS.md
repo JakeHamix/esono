@@ -13,9 +13,9 @@ You are working on a static website for e-Sono, a Czech healthcare company (ultr
 
 ## Rules
 1. **Read before you write.** Always check `docs/PRD.md` and `docs/DESIGN.md` before implementing or modifying anything.
-2. **No unnecessary complexity.** Pure HTML + CSS. No JS unless absolutely required. No frameworks, no build tools.
+2. **No unnecessary complexity.** HTML + Tailwind CSS (CDN). CDN-only libraries are allowed (Tailwind CSS, Lucide Icons, i18next, Google Fonts). No build tools, bundlers, or npm.
 3. **Follow the design system.** Use the colours, typography, and layout patterns defined in `docs/DESIGN.md`. Do not introduce new visual patterns without updating the design doc.
-4. **Both languages.** When changing content or structure, apply the change to both `/cs/` and `/en/` versions.
+4. **Both languages.** Single HTML source with Czech as static default. English loaded at runtime via i18next. Translation strings live in `assets/i18n/`. When changing structure, edit `cs/index.html` and copy to `en/index.html`. When changing text, update the Czech in the HTML and the English in `assets/i18n/en.json`.
 5. **Shared assets only.** CSS and images go in `/assets/`. Do not duplicate stylesheets per language.
 6. **Mobile-first.** Write CSS mobile-first, then add breakpoints for larger screens.
 7. **Keep docs in Czech.** `docs/PRD.md`, `docs/DESIGN.md`, and `docs/ASSETS.md` are written in Czech. Keep them in Czech when updating.

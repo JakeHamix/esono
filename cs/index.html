@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">eSONO — ultrazvukové přístroje</title>
+  <meta name="description" content="eSONO s.r.o. — prodej, distribuce, servis a opravy ultrazvukových přístrojů GE Healthcare. Spolehlivý partner pro zdravotnická zařízení v ČR.">
+  <meta name="keywords" content="ultrazvuk, ultrazvukové přístroje, GE Healthcare, sondy, servis, opravy, eSONO, zdravotnická technika">
+  <meta name="author" content="eSONO s.r.o.">
+  <link rel="canonical" href="https://esono.cz/cs/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="eSONO — ultrazvukové přístroje">
+  <meta property="og:description" content="Prodej, distribuce, servis a opravy ultrazvukových přístrojů GE Healthcare. Spolehlivý partner pro zdravotnická zařízení.">
+  <meta property="og:image" content="https://esono.cz/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://esono.cz/cs/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="eSONO">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="eSONO — ultrazvukové přístroje">
+  <meta name="twitter:description" content="Prodej, distribuce, servis a opravy ultrazvukových přístrojů GE Healthcare.">
+  <meta name="twitter:image" content="https://esono.cz/assets/img/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/img/logo/favicon-color.png">
+  <link rel="apple-touch-icon" href="../assets/img/logo/favicon-square-color.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#88B340',
+            'primary-dark': '#6E9230',
+            'gray-bg': '#F4F6F8',
+            'dark-bg': '#111827',
+            'dark-surface': '#1F2937',
+            'dark-border': '#374151',
+            'text-main': '#2D2D2D',
+            'text-secondary': '#6B7280',
+          },
+          fontFamily: {
+            manrope: ['Manrope', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body class="font-manrope text-text-main dark:text-gray-200 dark:bg-dark-bg antialiased transition-colors duration-300">
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="sticky top-0 z-50 bg-white dark:bg-dark-surface shadow-sm dark:shadow-dark-border/20 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="#" class="flex-shrink-0">
+          <img src="../assets/img/logo/logo-color.svg" alt="eSONO" class="h-10 md:h-12 w-auto dark:hidden" id="logo-light">
+          <img src="../assets/img/logo/logo-white.svg" alt="eSONO" class="h-10 md:h-12 w-auto hidden dark:block" id="logo-dark">
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#o-nas" class="text-text-main dark:text-gray-200 hover:text-primary transition-colors font-medium" data-i18n="nav.about">O nás</a>
+          <a href="#sluzby" class="text-text-main dark:text-gray-200 hover:text-primary transition-colors font-medium" data-i18n="nav.services">Služby</a>
+          <a href="#kontakt" class="text-text-main dark:text-gray-200 hover:text-primary transition-colors font-medium" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+
+        <!-- Language switcher + hamburger -->
+        <div class="flex items-center gap-3">
+          <!-- Dark mode toggle -->
+          <button id="theme-btn" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle dark mode">
+            <span class="icon-sun hidden"><i data-lucide="sun" class="w-5 h-5"></i></span>
+            <span class="icon-moon"><i data-lucide="moon" class="w-5 h-5"></i></span>
+          </button>
+
+          <div class="flex items-center gap-1 text-sm">
+            <a href="../cs/" data-lang="cs" class="flex items-center gap-1.5 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              <svg class="w-5 h-3.5 rounded-sm shadow-sm" viewBox="0 0 20 14" fill="none"><rect width="20" height="7" fill="#fff"/><rect y="7" width="20" height="7" fill="#D7141A"/><polygon points="0,0 10,7 0,14" fill="#11457E"/></svg>
+              CZ
+            </a>
+            <span class="text-gray-300 dark:text-gray-600">|</span>
+            <a href="../en/" data-lang="en" class="flex items-center gap-1.5 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              <svg class="w-5 h-3.5 rounded-sm shadow-sm" viewBox="0 0 60 30"><clipPath id="gb"><rect width="60" height="30"/></clipPath><g clip-path="url(#gb)"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" clip-path="url(#gb)"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></g></svg>
+              EN
+            </a>
+          </div>
+
+          <!-- Hamburger button (mobile) -->
+          <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" aria-label="Menu">
+            <span class="icon-menu"><i data-lucide="menu" class="w-6 h-6"></i></span>
+            <span class="icon-x hidden"><i data-lucide="x" class="w-6 h-6"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-100 dark:border-dark-border bg-white dark:bg-dark-surface">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#o-nas" class="block py-2 text-text-main dark:text-gray-200 hover:text-primary font-medium" data-i18n="nav.about">O nás</a>
+        <a href="#sluzby" class="block py-2 text-text-main dark:text-gray-200 hover:text-primary font-medium" data-i18n="nav.services">Služby</a>
+        <a href="#kontakt" class="block py-2 text-text-main dark:text-gray-200 hover:text-primary font-medium" data-i18n="nav.contact">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="bg-gray-bg dark:bg-dark-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+      <div class="flex-1 text-center md:text-left" data-reveal="left">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4" data-i18n="hero.title">Váš partner pro ultrazvukovou diagnostiku</h1>
+        <p class="text-lg md:text-xl text-text-secondary dark:text-gray-400 mb-8 max-w-lg mx-auto md:mx-0" data-i18n="hero.subtitle">Prodej, distribuce, servis a opravy ultrazvukových přístrojů pro zdravotnická zařízení po celé České republice.</p>
+        <a href="#kontakt" class="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg transition-colors" data-i18n="hero.cta">Kontaktujte nás</a>
+      </div>
+      <div class="flex-1" data-reveal="right">
+        <img src="../assets/img/hero.png" alt="Ultrazvukový přístroj eSONO" class="w-full max-w-md mx-auto rounded-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="bg-white dark:bg-dark-surface border-y border-gray-200 dark:border-dark-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div data-reveal="up" data-reveal-delay="1">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary" data-i18n="stats.clients">24+</p>
+          <p class="text-sm text-text-secondary dark:text-gray-400 mt-1" data-i18n="stats.clients.label">aktivních klientů</p>
+        </div>
+        <div data-reveal="up" data-reveal-delay="2">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary" data-i18n="stats.experience">15+</p>
+          <p class="text-sm text-text-secondary dark:text-gray-400 mt-1" data-i18n="stats.experience.label">let zkušeností v oboru</p>
+        </div>
+        <div data-reveal="up" data-reveal-delay="3">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary" data-i18n="stats.devices">100+</p>
+          <p class="text-sm text-text-secondary dark:text-gray-400 mt-1" data-i18n="stats.devices.label">servisovaných přístrojů</p>
+        </div>
+        <div data-reveal="up" data-reveal-delay="4">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary" data-i18n="stats.coverage">ČR</p>
+          <p class="text-sm text-text-secondary dark:text-gray-400 mt-1" data-i18n="stats.coverage.label">celostátní pokrytí</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ O NÁS ============ -->
+  <section id="o-nas" class="bg-white dark:bg-dark-surface">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12" data-reveal="up" data-i18n="about.title">O nás</h2>
+
+      <div class="max-w-3xl mx-auto space-y-6 text-text-secondary dark:text-gray-400 leading-relaxed" data-reveal="up">
+        <p data-i18n="about.story">Společnost eSONO s.r.o. vznikla v červenci 2025 jako nástupce ultrazvukové divize společnosti EXRAY s.r.o. Převzali jsme kompletní portfolio vybavení, zákaznické vztahy a servisní závazky, abychom mohli pokračovat v poskytování špičkových služeb v oblasti ultrazvukové diagnostiky.</p>
+
+        <p data-i18n="about.mission">Naším posláním je poskytovat komplexní služby v oblasti ultrazvukové diagnostiky — od prodeje přístrojů přes distribuci až po odborný servis a opravy. Spolupracujeme především se značkou GE Healthcare, jejíž přístroje patří ke světové špičce.</p>
+
+        <p data-i18n="about.expertise">Náš tým disponuje dlouholetými zkušenostmi v oboru ultrazvukové techniky. Disponujeme řemeslnou živností na montáž, opravy, revize a zkoušky elektrických zařízení, což nám umožňuje poskytovat komplexní technickou podporu.</p>
+
+        <p data-i18n="about.clients">Obsluhujeme desítky aktivních klientů — nemocnice, kliniky a soukromé lékařské praxe po celé České republice. Na každého zákazníka klademe individuální přístup a dlouhodobou spolupráci.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROČ NÁS ============ -->
+  <section class="bg-gray-bg dark:bg-dark-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-4" data-reveal="up" data-i18n="why.title">Proč zvolit eSONO?</h2>
+      <p class="text-text-secondary dark:text-gray-400 text-center max-w-2xl mx-auto mb-12" data-reveal="up" data-i18n="why.subtitle">Spojujeme odbornost, spolehlivost a osobní přístup — vše, co od partnera v ultrazvukové diagnostice očekáváte.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="text-center p-6" data-reveal="up" data-reveal-delay="1">
+          <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary/10">
+            <i data-lucide="shield-check" class="w-7 h-7 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" data-i18n="why.certified.title">Certifikovaný servis</h3>
+          <p class="text-text-secondary dark:text-gray-400 text-sm leading-relaxed" data-i18n="why.certified.desc">Řemeslná živnost na montáž, opravy, revize a zkoušky elektrických zařízení. Váš přístroj je v odborných rukou.</p>
+        </div>
+
+        <div class="text-center p-6" data-reveal="up" data-reveal-delay="2">
+          <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary/10">
+            <i data-lucide="heart-handshake" class="w-7 h-7 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" data-i18n="why.partner.title">Osobní přístup</h3>
+          <p class="text-text-secondary dark:text-gray-400 text-sm leading-relaxed" data-i18n="why.partner.desc">Každý klient má svého kontaktního technika. Nejsme anonymní linka — jsme partneři, na které se můžete spolehnout.</p>
+        </div>
+
+        <div class="text-center p-6" data-reveal="up" data-reveal-delay="3">
+          <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary/10">
+            <i data-lucide="refresh-cw" class="w-7 h-7 text-primary"></i>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" data-i18n="why.lifecycle.title">Kompletní životní cyklus</h3>
+          <p class="text-text-secondary dark:text-gray-400 text-sm leading-relaxed" data-i18n="why.lifecycle.desc">Od výběru přístroje přes instalaci, pravidelný servis až po modernizaci. Postaráme se o vše na jednom místě.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLUŽBY ============ -->
+  <section id="sluzby" class="bg-white dark:bg-dark-surface">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12" data-reveal="up" data-i18n="services.title">Naše služby</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <!-- Prodej -->
+        <div class="bg-white dark:bg-dark-surface rounded-lg shadow-sm dark:shadow-dark-border/10 p-6 md:p-8" data-reveal="up" data-reveal-delay="1">
+          <div class="mb-4 w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10">
+            <i data-lucide="handshake" class="w-6 h-6 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-extrabold mb-3" data-i18n="services.sales.title">Prodej ultrazvukových přístrojů</h3>
+          <p class="text-text-secondary dark:text-gray-400 leading-relaxed" data-i18n="services.sales.desc">Dodáváme ultrazvukové přístroje přední značky GE Healthcare — řady Vivid (kardiologie), LOGIQ (obecné zobrazování), Voluson (porodnictví/gynekologie) a Versana. Nabízíme nové i repasované přístroje a široké portfolio sond a příslušenství.</p>
+        </div>
+
+        <!-- Distribuce -->
+        <div class="bg-white dark:bg-dark-surface rounded-lg shadow-sm dark:shadow-dark-border/10 p-6 md:p-8" data-reveal="up" data-reveal-delay="2">
+          <div class="mb-4 w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10">
+            <i data-lucide="truck" class="w-6 h-6 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-extrabold mb-3" data-i18n="services.distribution.title">Distribuce a dodávky</h3>
+          <p class="text-text-secondary dark:text-gray-400 leading-relaxed" data-i18n="services.distribution.desc">Zajišťujeme kompletní dodávky ultrazvukových přístrojů a sond do zdravotnických zařízení po celé České republice. Součástí našich služeb je kompletní logistika včetně profesionální instalace.</p>
+        </div>
+
+        <!-- Servis -->
+        <div class="bg-white dark:bg-dark-surface rounded-lg shadow-sm dark:shadow-dark-border/10 p-6 md:p-8" data-reveal="up" data-reveal-delay="3">
+          <div class="mb-4 w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10">
+            <i data-lucide="wrench" class="w-6 h-6 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-extrabold mb-3" data-i18n="services.service.title">Servis a opravy</h3>
+          <p class="text-text-secondary dark:text-gray-400 leading-relaxed" data-i18n="services.service.desc">Poskytujeme pravidelnou údržbu, preventivní servis, diagnostiku a opravy ultrazvukových přístrojů. Disponujeme řemeslnou živností na montáž, opravy, revize a zkoušky elektrických zařízení.</p>
+        </div>
+
+        <!-- Pronájem -->
+        <div class="bg-white dark:bg-dark-surface rounded-lg shadow-sm dark:shadow-dark-border/10 p-6 md:p-8" data-reveal="up" data-reveal-delay="4">
+          <div class="mb-4 w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10">
+            <i data-lucide="calendar-clock" class="w-6 h-6 text-primary"></i>
+          </div>
+          <h3 class="text-xl font-extrabold mb-3" data-i18n="services.rental.title">Pronájem přístrojů</h3>
+          <p class="text-text-secondary dark:text-gray-400 leading-relaxed" data-i18n="services.rental.desc">Nabízíme dlouhodobý pronájem ultrazvukových přístrojů a sond za flexibilních podmínek. Ideální řešení pro zdravotnická zařízení, která preferují pronájem před nákupem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section id="kontakt" class="bg-gray-bg dark:bg-dark-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12" data-reveal="up" data-i18n="contact.title">Kontakt</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact form -->
+        <div data-reveal="left">
+          <h3 class="text-xl font-extrabold mb-6" data-i18n="contact.form.title">Napište nám</h3>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-text-secondary dark:text-gray-400 mb-1" data-i18n="contact.form.name">Jméno</label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-dark-border dark:bg-dark-bg dark:text-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors"
+                data-i18n="contact.form.name.placeholder" placeholder="Vaše jméno">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-text-secondary dark:text-gray-400 mb-1" data-i18n="contact.form.email">E-mail</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-dark-border dark:bg-dark-bg dark:text-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors"
+                data-i18n="contact.form.email.placeholder" placeholder="vas@email.cz">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-text-secondary dark:text-gray-400 mb-1" data-i18n="contact.form.message">Zpráva</label>
+              <textarea id="message" name="message" rows="5" required
+                class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-dark-border dark:bg-dark-bg dark:text-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors resize-y"
+                data-i18n="contact.form.message.placeholder" placeholder="Jak vám můžeme pomoci?"></textarea>
+            </div>
+            <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg transition-colors" data-i18n="contact.form.submit">Odeslat zprávu</button>
+          </form>
+        </div>
+
+        <!-- Contact info -->
+        <div class="space-y-6" data-reveal="right">
+          <h3 class="text-xl font-extrabold mb-6" data-i18n="contact.info.title">Kontaktní údaje</h3>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="building-2" class="w-5 h-5 text-primary mt-1 flex-shrink-0"></i>
+            <div>
+              <p class="font-medium" data-i18n="contact.info.hq">Sídlo</p>
+              <p class="text-text-secondary dark:text-gray-400">Karlovarská 89, 271 01 Nové Strašecí</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-5 h-5 text-primary mt-1 flex-shrink-0"></i>
+            <div>
+              <p class="font-medium" data-i18n="contact.info.office">Provozovna</p>
+              <p class="text-text-secondary dark:text-gray-400">Dobronická 1257, Praha 4 - Libuš</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="mail" class="w-5 h-5 text-primary mt-1 flex-shrink-0"></i>
+            <div>
+              <p class="font-medium">E-mail</p>
+              <p class="text-text-secondary dark:text-gray-400"><a href="mailto:info@esono.cz" class="hover:text-primary transition-colors">info@esono.cz</a></p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="phone" class="w-5 h-5 text-primary mt-1 flex-shrink-0"></i>
+            <div>
+              <p class="font-medium" data-i18n="contact.info.phone">Telefon</p>
+              <p class="text-text-secondary dark:text-gray-400"><a href="tel:+420000000000" class="hover:text-primary transition-colors">+420 000 000 000</a></p>
+            </div>
+          </div>
+
+          <hr class="border-gray-200 dark:border-dark-border">
+
+          <div class="text-sm text-text-secondary dark:text-gray-400 space-y-1">
+            <p><span class="font-medium" data-i18n="contact.info.ico">IČO:</span> 234 53 834</p>
+            <p><span class="font-medium" data-i18n="contact.info.dic">DIČ:</span> CZ23453834</p>
+            <p><span class="font-medium" data-i18n="contact.info.ds">Datová schránka:</span> 37pn46w</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GOOGLE MAP ============ -->
+  <section class="w-full">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.5!2d14.4589!3d50.0044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b8f0a1a5b7b7d%3A0x0!2sDobronick%C3%A1%201257%2C%20Praha%204%20-%20Libu%C5%A1!5e0!3m2!1scs!2scz!4v1"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="eSONO provozovna — Dobronická 1257, Praha 4 - Libuš">
+    </iframe>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-gray-100 dark:bg-dark-surface text-text-main dark:text-gray-200 border-t border-gray-200 dark:border-dark-border transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+        <div class="text-center md:text-left">
+          <img src="../assets/img/logo/logo-color.svg" alt="eSONO" class="h-10 mb-4 mx-auto md:mx-0 dark:hidden">
+          <img src="../assets/img/logo/logo-white.svg" alt="eSONO" class="h-10 mb-4 mx-auto md:mx-0 hidden dark:block">
+          <p class="text-text-secondary dark:text-gray-400 text-sm" data-i18n="footer.address">Karlovarská 89, 271 01 Nové Strašecí</p>
+          <p class="text-text-secondary dark:text-gray-400 text-sm">info@esono.cz</p>
+        </div>
+
+        <div class="flex flex-col items-center md:items-end gap-4">
+          <div class="flex items-center gap-2 text-sm">
+            <a href="../cs/" data-lang="cs" class="text-text-secondary dark:text-gray-400 hover:text-primary transition-colors">Čeština</a>
+            <span class="text-gray-300 dark:text-gray-600">|</span>
+            <a href="../en/" data-lang="en" class="text-text-secondary dark:text-gray-400 hover:text-primary transition-colors">English</a>
+          </div>
+          <p class="text-text-secondary dark:text-gray-500 text-sm">&copy; <span id="year">2025</span> eSONO s.r.o. <span data-i18n="footer.rights">Všechna práva vyhrazena.</span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- App script (i18n + hamburger + Lucide init) -->
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
