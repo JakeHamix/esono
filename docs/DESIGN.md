@@ -89,7 +89,7 @@ Manrope je oficiální font značky e-Sono dle logo manuálu. Moderní geometric
 ## 6. Vizuální prvky
 
 - **Obrázky:** Profesionální fotografie ultrazvukových přístrojů a zdravotnického prostředí. Vytvořené nebo upravené v **Canvě**.
-- **Ikony:** Jednoduché, liniové (line icons) — pro služby a kontaktní údaje
+- **Ikony:** Jednoduché, liniové (line icons) — pro služby se používají Canva exporty (`service-icons.png`), pro UI prvky (kontakt, navigace) Lucide Icons via CDN
 - **Stíny:** Jemné box-shadow na kartách, nic výrazného
 - **Zaoblení:** Mírně zaoblené rohy (4–8px) na kartách a tlačítkách
 - **Animace:** Minimální — maximálně jemný fade-in při scrollu (pokud bude JS)
