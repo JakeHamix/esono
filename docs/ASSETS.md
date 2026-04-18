@@ -124,6 +124,18 @@ Pro aktualizaci souboru v repozitáři po úpravě v Canvě:
 
 ### Zbývající úkoly
 
-- [ ] Opravit kalendářovou ikonu v service-icons designu
+- [ ] Re-export OG obrázku (`DAHHNoMw-g8`) na rozměr **1200×630** (aktuálně 1200×1697, portrait) — nutné pro správné zobrazení na sociálních sítích
 - [ ] Optimalizace loga pro favicon (16x16, 32x32, 180x180)
 - [ ] Fotografie / vizuály GE Healthcare přístrojů (Vivid, LOGIQ, Voluson)
+
+> **Poznámka:** Ikony služeb z `service-icons.png` byly nahrazeny Lucide Icons (CDN). Soubor zůstává v repozitáři jako záloha, ale na webu se nepoužívá.
+
+---
+
+## Webové assety (generované)
+
+| Soubor | Popis |
+|--------|-------|
+| `assets/css/custom.css` | Vlastní CSS — scroll-behavior, scroll reveal animace |
+| `assets/js/app.js` | JavaScript — i18n, dark mode, hamburger menu, Lucide init, scroll reveal |
+| `assets/i18n/en.json` | Anglické překlady všech textů na webu |
